@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+
+artifacts/
+cache/
+coverage/
+
+dist/
+build/
+
+.DS_Store
+
+*.log

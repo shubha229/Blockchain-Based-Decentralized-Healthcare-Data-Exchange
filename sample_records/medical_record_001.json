@@ -1,0 +1,13 @@
+{
+  "patientId": "P001",
+  "recordId": "REC001",
+  "recordType": "Lab Report",
+  "date": "2026-08-23",
+  "hospital": "Demo General Hospital",
+  "test": {
+    "name": "Synthetic Blood Test",
+    "result": "Modified",
+    "unit": "demo-unit"
+  },
+  "note": "Synthetic educational healthcare data. Not a real patient record."
+}
