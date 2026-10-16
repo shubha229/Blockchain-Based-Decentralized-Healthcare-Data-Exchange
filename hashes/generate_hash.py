@@ -1,11 +1,23 @@
 import hashlib
+import os
 
-file_path = "../sample_records/medical_record_001.json"
+# Project root directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-with open(file_path, "rb") as file:
-    data = file.read()
+# Path to the sample medical record
+file_path = os.path.join(
+    BASE_DIR,
+    "sample_records",
+    "medical_record_001.json"
+)
 
-file_hash = hashlib.sha256(data).hexdigest()
+try:
+    with open(file_path, "rb") as file:
+        file_hash = hashlib.sha256(file.read()).hexdigest()
 
-print("SHA-256:")
-print(file_hash)
+    print("File:", file_path)
+    print("SHA-256 Hash:", file_hash)
+
+except FileNotFoundError:
+    print("Error: Medical record file not found.")
+    print("Expected location:", file_path)
